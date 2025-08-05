@@ -30,3 +30,13 @@ class Management:
                 reports_found += i
 
         return reports_found
+
+    def get_reports_on_date(date, reports):
+        reports_found = []
+
+        #finding reports with a matching date
+        for i in reports:
+            if i.date_and_time.date() == date:
+                reports_found += i
+
+        return reports_found
