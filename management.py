@@ -8,14 +8,15 @@ class Management:
         self.repots_number = 0
         self.users_number = 0
 
-    def getUserRepot(self):
+    def get_user_report(self):
         return self.reports
 
-    def addReport(self,report):
+    def add_report(self,report):
         self.reports.append(report)
 
-    def viewAllUserReport(self, id):
+    def view_user_report(self, id):
         # for i in range(self.repots_number):
         #     if id == self.reports[i].user_id:
+        pass
 
     #def getUser
