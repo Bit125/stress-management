@@ -20,3 +20,23 @@ class Management:
         pass
 
     #def getUser
+
+    def get_reports_of_user(self, user, reports):
+        reports_found = []
+
+        #finding reports with a matching user ID
+        for i in reports:
+            if i.user_id == user.user_id:
+                reports_found += i
+
+        return reports_found
+
+    def get_reports_on_date(self, date, reports):
+        reports_found = []
+
+        #finding reports with a matching date
+        for i in reports:
+            if i.date_and_time.date() == date:
+                reports_found += i
+
+        return reports_found
