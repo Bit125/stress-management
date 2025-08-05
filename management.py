@@ -20,3 +20,9 @@ class Management:
         pass
 
     #def getUser
+
+    def get_reports_of_user(self, user):
+        reports_found = []
+        for i in self.reports:
+            if i.user_id == user.user_id:
+                reports_found += i
