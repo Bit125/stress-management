@@ -31,7 +31,7 @@ class Management:
 
         return reports_found
 
-    def get_reports_on_date(date, reports):
+    def get_reports_on_date(self, date, reports):
         reports_found = []
 
         #finding reports with a matching date
