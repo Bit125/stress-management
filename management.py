@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from Users import Users
 
 class Management:
     def __init__(self):
@@ -18,5 +19,10 @@ class Management:
         # for i in range(self.repots_number):
         #     if id == self.reports[i].user_id:
         pass
+
+    def add_user(self, username, password, age, sex):
+        self.users_number += 1
+        new_user = Users(username, password, self.users_number, age, sex)
+        self.users.append(new_user)
 
     #def getUser
