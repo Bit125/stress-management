@@ -1,6 +1,15 @@
+import datetime
+import time
+
 class Report:
-    def __init__(self, level, id):
+    def __init__(self, level, user):
         self.stress_level = level
-        self.user_id = id
-        self.date = ...
-        self.time = ...
+        self.user_id = user
+        self.date_and_time = datetime.datetime.now()
+
+report1 = Report(8, 0)
+print(report1.date_and_time)
+
+time.sleep(5)
+report2 = Report(2, 0)
+print(report2.date_and_time)
