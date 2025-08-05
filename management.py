@@ -21,8 +21,12 @@ class Management:
 
     #def getUser
 
-    def get_reports_of_user(self, user):
+    def get_reports_of_user(self, user, reports):
         reports_found = []
-        for i in self.reports:
+
+        #finding reports with a matching user ID
+        for i in reports:
             if i.user_id == user.user_id:
                 reports_found += i
+
+        return reports_found
