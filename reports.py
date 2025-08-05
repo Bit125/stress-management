@@ -1,6 +1,6 @@
 class Report:
     def __init__(self, level, id):
-        self.stressLevel = level
-        self.userID = id
+        self.stress_level = level
+        self.user_id = id
         self.date = ...
         self.time = ...
