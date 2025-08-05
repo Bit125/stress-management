@@ -5,6 +5,7 @@ class Users:
         self.user_id = user_id
         self.age = age
         self.sex = sex
+        self.logged_in = False
 
     def get_username(self):
         return self.username
@@ -36,3 +37,13 @@ class Users:
     def set_sex(self, new_sex):
         self.sex = new_sex
 
+    def log_in(self):
+        self.input_username = input("Enter your username: ")
+        self.input_password = input("Enter your password: ")
+
+        if self.input_username == self.username and self.input_password == self.password:
+            self.logged_in = True
+            print("Login successful.")
+        else:
+            self.logged_in = False
+            print("Login failed. Incorrect username or password.")
