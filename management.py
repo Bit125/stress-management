@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
 from reports import Report
 
@@ -7,7 +8,7 @@ class Management:
     def __init__(self):
         self.users = []
         self.reports = []
-        self.repots_number = 0
+        self.reports_number = 0
         self.users_number = 0
 
     def get_user_reports(self):
@@ -15,30 +16,74 @@ class Management:
 
     def add_report(self,report):
         self.reports.append(report)
+        self.reports_number += 1
 
-    def view_user_report(self, id):
+    def view_user_report(self, identifier):
+
+        if self.reports_number == 0:
+            return
+
         plt.style.use('_mpl-gallery')
 
-        ay = []
+        y = []
+        x = []
+        n = 0
+        for i in range(self.reports_number):
+            if identifier == self.reports[i].user_id:
 
-        for i in range(self.repots_number):
-            if id == self.reports[i].user_id:
-                ay.append(self.reports[i].stress_level)
+                y.append(self.reports[n].stress_level)
+                x.append(n)
+
+                n = n + 1
+                print("found")
 
         # make data
-        x = np.arange(0, 10, 2)
-        y = ay
+
+
+
+
 
         # plot
         fig, ax = plt.subplots()
 
-        ax.stackplot(x, y)
+        ax.plot(x, y)
 
-        ax.set(xlim=(0, 8), xticks=np.arange(1, 20),
-               ylim=(0, 8), yticks=np.arange(1, 10))
+        ax.set(xlim=(0, n), xticks=np.arange(1, n),
+               ylim=(0, 12), yticks=np.arange(1, 12))
 
         plt.show()
-    
+
+
+
+    def view_report(self, reports_inp):
+        if self.reports_number == 0:
+            return
+
+        plt.style.use('_mpl-gallery')
+
+        y = []
+        x = []
+        n = 0
+        for i in range(len(reports_inp)):
+            y.append(reports_inp[n].stress_level)
+            x.append(n)
+
+            n = n + 1
+
+        # make data
+        # plot
+        fig, ax = plt.subplots()
+
+        ax.plot(x, y)
+
+        ax.set(xlim=(0, n), xticks=np.arange(1, n),
+               ylim=(0, 12), yticks=np.arange(1, 12))
+
+        plt.show()
+
+
+    #def getUser
+
     def get_reports_of_user(self, user, reports):
         reports_found = []
 
