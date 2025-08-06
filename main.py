@@ -45,7 +45,9 @@ if __name__ == "__main__":
 
 
         elif option == 4:
-
+            b = int(input("Enter your user id: "))
+            for user in manager.users:
+                user.view_user_report(b)
 
         elif option == 5:
             break
