@@ -1,5 +1,4 @@
 import datetime
-#import time
 
 class Report:
     def __init__(self, level, user):
