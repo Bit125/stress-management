@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 class Users:
     def __init__(self, username, password, user_id, age, sex):
         self.username = username
@@ -50,3 +53,59 @@ class Users:
 
     def add_report(self,report):
         self.reports.append(report)
+
+
+    def view_report(self, reports_inp):
+        if len(reports_inp) == 0:
+            return
+
+        plt.style.use('_mpl-gallery')
+
+        y = []
+        x = []
+        n = 0
+        for i in range(len(reports_inp)):
+            y.append(reports_inp[n].stress_level)
+            x.append(n)
+
+            n = n + 1
+
+        # plot
+        fig, ax = plt.subplots()
+
+        ax.plot(x, y)
+
+        ax.set(xlim=(0, n), xticks=np.arange(1, n),
+               ylim=(0, 12), yticks=np.arange(1, 12))
+
+        plt.show()
+
+    def view_user_report(self, identifier):
+
+        if len(self.reports) == 0:
+            return
+
+        plt.style.use('_mpl-gallery')
+
+        y = []
+        x = []
+        n = 0
+        for i in range(len(self.reports)):
+            if identifier == self.reports[i].user_id:
+
+                y.append(self.reports[n].stress_level)
+                x.append(n)
+
+                n = n + 1
+
+        # plot
+        fig, ax = plt.subplots()
+
+        ax.plot(x, y)
+
+        ax.set(xlim=(0, n), xticks=np.arange(1, n),
+               ylim=(0, 12), yticks=np.arange(1, 12))
+
+        plt.show()
+
+
