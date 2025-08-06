@@ -38,12 +38,7 @@ class Management:
                ylim=(0, 8), yticks=np.arange(1, 10))
 
         plt.show()
-
-
-
-
-    #def getUser
-
+    
     def get_reports_of_user(self, user, reports):
         reports_found = []
 
