@@ -5,6 +5,7 @@ class Users:
         self.user_id = user_id
         self.age = age
         self.sex = sex
+        self.reports = []
         self.logged_in = False
 
     def get_username(self):
@@ -44,3 +45,8 @@ class Users:
         else:
             self.logged_in = False
             print("Login failed. Incorrect username or password.")
+
+        return self.logged_in
+
+    def add_report(self,report):
+        self.reports.append(report)
