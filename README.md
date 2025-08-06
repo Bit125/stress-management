@@ -6,4 +6,5 @@
 > - Log in to you're account
 > - Make a stress report
 > - View all you're stress reports
-
+>
+> This project was made for a hackathon
