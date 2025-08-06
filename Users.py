@@ -90,22 +90,27 @@ class Users:
         y = []
         x = []
         n = 0
+        print(identifier)
+        print(self.user_id)
         for i in range(len(self.reports)):
-            if identifier == self.reports[i].user_id:
+            # print(".")
+            if identifier == self.user_id:
 
                 y.append(self.reports[n].stress_level)
                 x.append(n)
 
                 n = n + 1
 
-        # plot
-        fig, ax = plt.subplots()
+        # plot\
+        if not n == 0:
+            fig, ax = plt.subplots()
 
-        ax.plot(x, y)
+            ax.plot(x, y)
 
-        ax.set(xlim=(0, n), xticks=np.arange(1, n),
-               ylim=(0, 12), yticks=np.arange(1, 12))
+            ax.set(xlim=(0, n), xticks=np.arange(1, n),
+                   ylim=(0, 12), yticks=np.arange(1, 12))
 
-        plt.show()
-
+            plt.show()
+        else:
+            print("User not found")
 
