@@ -40,7 +40,9 @@ if __name__ == "__main__":
 
                 report = Report(a, user_id)
                 manager.users[user_id-1].add_report(report)
+                #manager.reports_number += 1
                 manager.reports_number += 1
+
 
         elif option == 4:
 

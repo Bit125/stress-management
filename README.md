@@ -1,4 +1,10 @@
 # Stress Management
 ![github](https://img.shields.io/badge/Python-0000e6?logoColor=white)
 
-- A simple project for traking stress you're stress levels across the day!
+> This project is a stress traker, just create a accaunt and report you're stress levels across the day.
+> - Create an account
+> - Log in to you're account
+> - Make a stress report
+> - View all you're stress reports
+>
+> This project was made for a hackathon
