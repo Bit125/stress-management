@@ -6,10 +6,10 @@ if __name__ == "__main__":
 
     manager = Management()
 
-    option = int(input("[1] Log In \n[2] Sign Up \n[3] Add Report \n[4] Exit\n"))
+    option = int(input("[1] Log In \n[2] Sign Up \n[3] Add Report \n[4] View Graph \n[5] Exit\n"))
     user_id = -1
 
-    while option != 4:
+    while True:
         if option == 2:
             username = input("Create a username: ")
             password = input("Create a password: ")
@@ -40,14 +40,16 @@ if __name__ == "__main__":
 
                 report = Report(a, user_id)
                 manager.users[user_id-1].add_report(report)
-                manager.repots_number += 1
-
+                manager.reports_number += 1
 
         elif option == 4:
+
+
+        elif option == 5:
             break
 
 
         else:
             print("Invalid input")
             break
-        option = int(input("[1] Log In \n[2] Sign Up \n[3] Add Report \n[4] Exit\n"))
+        option = int(input("[1] Log In \n[2] Sign Up \n[3] Add Report \n[4] View Graph \n[5] Exit\n"))

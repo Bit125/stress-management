@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from Users import Users
 
 class Management:
     def __init__(self):
