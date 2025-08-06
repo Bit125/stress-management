@@ -54,6 +54,7 @@ class Management:
         plt.show()
 
 
+
     def view_report(self, reports_inp):
         if self.reports_number == 0:
             return
